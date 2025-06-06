@@ -64,6 +64,15 @@ Born2BeRoot is a system administration project that teaches how to securely conf
 ```bash
 lsblk  # Verify partition structure
 cryptsetup luksDump /dev/sda5  # Check encryption
-    
 
-### User and Groups
+
+## User and Groups
+
+sudo useradd -m omajdoub
+sudo passwd omajdoub
+sudo usermod -aG sudo, omajdoub, user42 omajdoub
+
+## SSH Configuration
+Edit /etc/ssh/sshd_config
+Port 4242
+PermitRootLogin no
